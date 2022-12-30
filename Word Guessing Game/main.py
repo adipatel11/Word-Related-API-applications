@@ -20,8 +20,10 @@ def randomWord():
 
 
 def getSynonyms(word):
-
-    response = requests.get(f'https://words.bighugelabs.com/api/2/8d80fe04f473c60402905a1fdd32d632/{word}/json').text #API Call
+    
+    APIKey = 'exampleKey'
+    
+    response = requests.get(f'https://words.bighugelabs.com/api/2/{APIKey}/{word}/json').text #API Call
 
     response = dict(eval(response)) # converts json to a dictionary so that retrieving information becomes easier
 
